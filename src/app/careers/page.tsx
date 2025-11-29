@@ -123,9 +123,9 @@ export default function CareersPage() {
   ];
 
   const companyStats = [
-    { number: "150+", label: "Team Members", icon: Users },
-    { number: "25+", label: "Countries Served", icon: Globe },
-    { number: "500+", label: "Projects Delivered", icon: Briefcase },
+    { number: "20+", label: "Team Members", icon: Users },
+    { number: "10+", label: "Countries Served", icon: Globe },
+    { number: "30+", label: "Projects Delivered", icon: Briefcase },
     { number: "98%", label: "Employee Satisfaction", icon: Heart }
   ];
 
@@ -355,133 +355,6 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
-
-      {/* Meet Our Team */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet Our Leadership Team</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Learn from industry experts and work alongside passionate professionals
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Rajesh Patel",
-                role: "CEO & Founder",
-                experience: "15+ years",
-                image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
-                linkedin: "#"
-              },
-              {
-                name: "Priya Sharma",
-                role: "CTO",
-                experience: "12+ years",
-                image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face",
-                linkedin: "#"
-              },
-              {
-                name: "Amit Kumar",
-                role: "Head of Engineering",
-                experience: "10+ years",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-                linkedin: "#"
-              }
-            ].map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02, y: -5 }}
-                className="bg-gradient-card backdrop-blur-sm border border-border rounded-2xl p-8 text-center hover:shadow-card transition-all duration-300"
-              >
-                <img 
-                  src={member.image} 
-                  alt={member.name}
-                  className="w-24 h-24 rounded-full mx-auto mb-6 object-cover"
-                />
-                <h3 className="text-xl font-bold mb-2">{member.name}</h3>
-                <p className="text-primary font-medium mb-2">{member.role}</p>
-                <p className="text-sm text-muted-foreground mb-4">{member.experience}</p>
-                <Button variant="outline" size="sm">
-                  Connect on LinkedIn
-                </Button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Employee Testimonials */}
-      <section className="py-24 bg-secondary/30">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">What Our Team Says</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Hear from our employees about their experience working at FlexaDigital
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                name: "Sarah Johnson",
-                role: "Senior Developer",
-                quote: "FlexaDigital has been an incredible place to grow my career. The learning opportunities are endless, and the team is supportive and collaborative.",
-                rating: 5,
-                tenure: "2 years"
-              },
-              {
-                name: "Michael Chen",
-                role: "UI/UX Designer",
-                quote: "The creative freedom and trust given to designers here is amazing. I've worked on projects that have genuinely impacted millions of users.",
-                rating: 5,
-                tenure: "1.5 years"
-              }
-            ].map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-card border border-border rounded-2xl p-8"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <div key={i} className="w-4 h-4 bg-yellow-400 rounded-full mr-1" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6 italic">"{testimonial.quote}"</p>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <div className="font-bold">{testimonial.name}</div>
-                    <div className="text-sm text-muted-foreground">{testimonial.role}</div>
-                  </div>
-                  <div className="text-xs text-muted-foreground">
-                    {testimonial.tenure} at FlexaDigital
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-24 bg-gradient-hero">
         <div className="container mx-auto px-6 text-center">
           <motion.div

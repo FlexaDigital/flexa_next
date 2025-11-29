@@ -30,7 +30,7 @@ export default function About() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4"
             >
-              Building exceptional digital solutions for over 10 years
+              Building exceptional digital solutions for over 5 years
             </motion.p>
           </div>
         </section>
@@ -66,11 +66,11 @@ export default function About() {
               >
                 <div className="space-y-6">
                   <div>
-                    <div className="text-4xl font-bold text-primary mb-2">500+</div>
+                    <div className="text-4xl font-bold text-primary mb-2">30+</div>
                     <div className="text-muted-foreground">Projects Completed</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-bold text-accent mb-2">10+</div>
+                    <div className="text-4xl font-bold text-accent mb-2">5+</div>
                     <div className="text-muted-foreground">Years Experience</div>
                   </div>
                   <div>
@@ -162,7 +162,7 @@ export default function About() {
             >
               <Badge variant="outline" className="mb-4">Our Journey</Badge>
               <h2 className="text-5xl md:text-6xl font-bold mb-6">
-                8 Years of Innovation
+                5 Years of Innovation
               </h2>
               <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
                 From startup to industry leader - our growth story
@@ -173,11 +173,11 @@ export default function About() {
               <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-accent rounded-full" />
               
               {[
-                { year: "2016", title: "Founded", desc: "Started with 2 developers", metric: "2 Team Members" },
-                { year: "2018", title: "First Enterprise Client", desc: "Landed Fortune 500 contract", metric: "$1M Revenue" },
-                { year: "2020", title: "Global Expansion", desc: "Opened offices in 3 countries", metric: "50+ Projects" },
-                { year: "2022", title: "AI Integration", desc: "Launched AI-powered solutions", metric: "200+ Projects" },
-                { year: "2024", title: "Industry Leader", desc: "Recognized as top digital agency", metric: "500+ Projects" }
+                { year: "2020", title: "Founded", desc: "Started with 2 developers", metric: "2 Team Members" },
+                { year: "2021", title: "First Enterprise Client", desc: "Landed Fortune 10 contract", metric: "50+ lakhs revenue" },
+                { year: "2022", title: "Global Expansion", desc: "Opened offices in 3 countries", metric: "10+ Projects" },
+                { year: "2023", title: "AI Integration", desc: "Launched AI-powered solutions", metric: "20+ Projects" },
+                { year: "2024", title: "Industry Leader", desc: "Recognized as top digital agency", metric: "30+ Projects" }
               ].map((milestone, index) => (
                 <motion.div
                   key={milestone.year}
