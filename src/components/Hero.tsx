@@ -93,8 +93,8 @@ const Hero = () => {
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto px-4">
           {[
-            { number: "500+", label: "Projects Completed", color: "text-primary" },
-            { number: "10+", label: "Years Experience", color: "text-accent" },
+            { number: "30+", label: "Projects Completed", color: "text-primary" },
+            { number: "5+", label: "Years Experience", color: "text-accent" },
             { number: "98%", label: "Client Satisfaction", color: "text-primary" }
           ].map((stat, index) => (
             <motion.div
