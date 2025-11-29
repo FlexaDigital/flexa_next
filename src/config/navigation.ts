@@ -36,11 +36,7 @@ export const navigationConfig: NavConfig = {
       href: "/",
       description: "Back to homepage"
     },
-    {
-      title: "Services",
-      href: "/solutions",
-      description: "Our comprehensive service offerings"
-    },
+
     {
       title: "Portfolio",
       href: "/case-studies",
@@ -105,12 +101,7 @@ export const navigationConfig: NavConfig = {
       description: "Secure CI/CD and autoscaling",
       icon: Cloud
     },
-    {
-      title: "All Services",
-      href: "/solutions",
-      description: "View complete service list",
-      icon: TrendingUp
-    }
+
   ],
 
   // Footer navigation

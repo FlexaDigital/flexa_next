@@ -13,13 +13,14 @@ import {
   MapPin, 
   Instagram,
   Facebook,
-  MessageCircle,
+  Linkedin,
   Award,
   Shield,
   Zap,
   Globe,
   Send
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import logo from "@/assets/flexa-digital.png";
 
 const Footer = () => {
@@ -76,11 +77,11 @@ const Footer = () => {
               <Link href="/" className="inline-block mb-6">
                 <img src={logo.src} alt="Flexa Digital" className="h-10 sm:h-12 w-auto" />
               </Link>
-              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
+              {/* <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                 We're a product studio that builds exceptional digital experiences. 
                 From startups to Fortune 500 companies, we deliver scalable solutions 
                 that drive real business results.
-              </p>
+              </p> */}
               
               {/* Contact Info */}
               <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
@@ -90,7 +91,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm">
                   <Phone className="h-3 w-3 sm:h-4 sm:w-4 text-primary flex-shrink-0" />
-                  <span>9998040372</span>
+                  <span>9033331031</span>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3 text-xs sm:text-sm">
                   <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-primary flex-shrink-0 mt-0.5" />
@@ -102,8 +103,9 @@ const Footer = () => {
               <div className="flex gap-3 sm:gap-4">
                 {[
                   { icon: Instagram, href: "https://www.instagram.com/flexadigital.in/", label: "Instagram" },
-                  { icon: Facebook, href: "https://www.facebook.com/flexadigital360/", label: "Facebook" },
-                  { icon: MessageCircle, href: "https://wa.me/919998040372", label: "WhatsApp" }
+                  { icon: Facebook, href: "https://www.facebook.com/", label: "Facebook" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/company/flexadigital", label: "LinkedIn" },
+                  { icon: FaWhatsapp, href: "https://wa.me/9033331031", label: "WhatsApp" }
                 ].map((social) => {
                   const Icon = social.icon;
                   return (
@@ -176,7 +178,7 @@ const Footer = () => {
               </ul>
               
               {/* Certifications */}
-              <div>
+              {/* <div>
                 <h5 className="font-semibold mb-2 sm:mb-3 text-xs sm:text-sm">Certifications</h5>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -193,7 +195,7 @@ const Footer = () => {
                     );
                   })}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -203,7 +205,7 @@ const Footer = () => {
           <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
               <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs sm:text-sm text-muted-foreground text-center sm:text-left">
-                <p>© {new Date().getFullYear()} FlexaDigital. All rights reserved.</p>
+                <p>© 2020 FlexaDigital. All rights reserved.</p>
                 <div className="flex items-center gap-3 sm:gap-4">
                   <Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
                   <Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link>
@@ -214,7 +216,7 @@ const Footer = () => {
               <div className="flex items-center gap-3 sm:gap-4">
                 <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
                   <Globe className="h-3 w-3 sm:h-4 sm:w-4 text-primary" />
-                  <span className="hidden sm:inline">Serving 25+ countries worldwide</span>
+                  <span className="hidden sm:inline">Serving 5+ countries worldwide</span>
                   <span className="sm:hidden">Global Service</span>
                 </div>
               </div>

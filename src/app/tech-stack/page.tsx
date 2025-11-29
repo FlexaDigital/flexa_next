@@ -101,39 +101,7 @@ const TechStack = () => {
         }
       ]
     },
-    cloud: {
-      title: "Cloud Infrastructure",
-      subtitle: "Scalable & Secure Architecture",
-      icon: Cloud,
-      color: "from-purple-500 to-pink-500",
-      bgPattern: "bg-gradient-to-br from-purple-50 to-pink-50",
-      technologies: [
-        {
-          name: "AWS Platform",
-          version: "Latest",
-          description: "Comprehensive cloud ecosystem",
-          stats: { projects: "200+", performance: "40% cost savings", satisfaction: "99%" },
-          features: ["Lambda", "ECS", "RDS", "CloudFront"],
-          logo: "☁️"
-        },
-        {
-          name: "Docker & K8s",
-          version: "Latest",
-          description: "Container orchestration at scale",
-          stats: { projects: "180+", performance: "90% faster deploy", satisfaction: "97%" },
-          features: ["Microservices", "Auto-scaling", "Load Balancing", "Service Mesh"],
-          logo: "🐳"
-        },
-        {
-          name: "Serverless",
-          version: "Latest",
-          description: "Event-driven architecture",
-          stats: { projects: "100+", performance: "Zero maintenance", satisfaction: "98%" },
-          features: ["Auto-scaling", "Pay-per-use", "Global CDN", "Edge Computing"],
-          logo: "⚡"
-        }
-      ]
-    },
+
     mobile: {
       title: "Mobile Innovation",
       subtitle: "Cross-Platform Excellence",
@@ -170,7 +138,7 @@ const TechStack = () => {
   };
 
   const achievements = [
-    { number: "500+", label: "Projects Delivered", icon: Rocket },
+    { number: "30+", label: "Projects Delivered", icon: Rocket },
     { number: "99.9%", label: "Uptime SLA", icon: Shield },
     { number: "50+", label: "Enterprise Clients", icon: Users },
     { number: "24/7", label: "Global Support", icon: Globe }
@@ -378,9 +346,6 @@ const TechStack = () => {
                           "Node.js Runtime": "/tech/nodejs",
                           "Python Ecosystem": "/tech/python",
                           "GraphQL APIs": "/tech/graphql",
-                          "AWS Platform": "/tech/aws",
-                          "Docker & K8s": "/tech/kubernetes",
-                          "Serverless": "/tech/serverless",
                           "React Native": "/tech/react-native",
                           "Flutter": "/tech/flutter",
                           "Progressive Web Apps": "/tech/pwa"

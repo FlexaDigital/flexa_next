@@ -12,34 +12,34 @@ import { motion } from "framer-motion";
 export default function CaseStudies() {
   const caseStudies = [
     {
-      title: "FinTech Platform Transformation",
-      client: "Fortune 500 Financial Services",
-      challenge: "Legacy system modernization for 2M+ users",
-      solution: "Microservices architecture with React & AWS",
+      title: "Import-Export ERP Solution",
+      client: "Global Trading Corporation",
+      challenge: "Complex multi-country trade operations management",
+      solution: "Comprehensive ERP system with customs integration",
       results: [
-        "400% faster transaction processing",
-        "99.99% uptime achievement", 
-        "$12M annual cost savings",
-        "50% reduction in support tickets"
+        "70% faster customs clearance",
+        "Real-time shipment tracking", 
+        "$8M cost reduction annually",
+        "95% compliance accuracy"
       ],
-      tech: ["React", "Node.js", "AWS", "PostgreSQL", "Redis"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      href: "/case-studies/ecommerce-platform"
+      tech: ["React", "Node.js", "PostgreSQL", "AWS", "Docker"],
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop",
+      href: "/case-studies/import-export-erp"
     },
     {
-      title: "Healthcare AI Platform",
-      client: "Leading MedTech Company",
-      challenge: "AI-powered diagnostic platform for hospitals",
-      solution: "Machine learning pipeline with real-time analytics",
+      title: "Custom ERP Solution",
+      client: "Manufacturing Enterprise",
+      challenge: "Streamline operations across multiple departments",
+      solution: "Tailored ERP system with advanced analytics",
       results: [
-        "95% diagnostic accuracy improvement",
-        "60% faster patient processing",
-        "FDA compliance achieved",
-        "200+ hospitals deployed"
+        "60% improvement in efficiency",
+        "Unified data management",
+        "Real-time reporting dashboard",
+        "50+ departments integrated"
       ],
-      tech: ["Python", "TensorFlow", "React", "Docker", "Kubernetes"],
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
-      href: "/case-studies/health-fitness-app"
+      tech: ["Next.js", "Python", "MongoDB", "Redis", "Kubernetes"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      href: "/case-studies/custom-erp-solution"
     },
     {
       title: "E-commerce Marketplace",

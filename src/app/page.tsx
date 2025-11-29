@@ -58,10 +58,10 @@ export default function Home() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const enterpriseStats = [
-    { number: "500+", label: "Enterprise Projects", sublabel: "Fortune 500 & Startups", icon: Building2 },
+    { number: "30+", label: "Enterprise Projects", sublabel: "Fortune 500 & Startups", icon: Building2 },
     { number: "99.9%", label: "Uptime Guarantee", sublabel: "SLA Compliance", icon: Shield },
     { number: "24/7", label: "Global Support", sublabel: "Multi-timezone Coverage", icon: Headphones },
-    { number: "$50M+", label: "Revenue Generated", sublabel: "For Our Clients", icon: DollarSign }
+    // { number: "$50M+", label: "Revenue Generated", sublabel: "For Our Clients", icon: DollarSign }
   ];
 
   const techStack = [
@@ -124,34 +124,34 @@ export default function Home() {
 
   const caseStudyHighlights = [
     {
-      title: "FinTech Platform Transformation",
-      client: "Fortune 500 Financial Services",
-      challenge: "Legacy system modernization for 2M+ users",
-      solution: "Microservices architecture with React & AWS",
+      title: "Import-Export ERP Solution",
+      client: "Global Trading Corporation",
+      challenge: "Complex multi-country trade operations management",
+      solution: "Comprehensive ERP system with customs integration",
       results: [
-        "400% faster transaction processing",
-        "99.99% uptime achievement", 
-        "$12M annual cost savings",
-        "50% reduction in support tickets"
+        "70% faster customs clearance",
+        "Real-time shipment tracking", 
+        "$8M cost reduction annually",
+        "95% compliance accuracy"
       ],
-      tech: ["React", "Node.js", "AWS", "PostgreSQL", "Redis"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      href: "/case-studies/ecommerce-platform"
+      tech: ["React", "Node.js", "PostgreSQL", "AWS", "Docker"],
+      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop",
+      href: "/case-studies/import-export-erp"
     },
     {
-      title: "Healthcare AI Platform",
-      client: "Leading MedTech Company",
-      challenge: "AI-powered diagnostic platform for hospitals",
-      solution: "Machine learning pipeline with real-time analytics",
+      title: "Custom ERP Solution",
+      client: "Manufacturing Enterprise",
+      challenge: "Streamline operations across multiple departments",
+      solution: "Tailored ERP system with advanced analytics",
       results: [
-        "95% diagnostic accuracy improvement",
-        "60% faster patient processing",
-        "FDA compliance achieved",
-        "200+ hospitals deployed"
+        "60% improvement in efficiency",
+        "Unified data management",
+        "Real-time reporting dashboard",
+        "50+ departments integrated"
       ],
-      tech: ["Python", "TensorFlow", "React", "Docker", "Kubernetes"],
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
-      href: "/case-studies/health-fitness-app"
+      tech: ["Next.js", "Python", "MongoDB", "Redis", "Kubernetes"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+      href: "/case-studies/custom-erp-solution"
     },
     {
       title: "E-commerce Marketplace",
@@ -304,8 +304,8 @@ export default function Home() {
             {/* Stats */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto px-4">
               {[
-                { number: "500+", label: "Projects Completed", color: "text-primary" },
-                { number: "10+", label: "Years Experience", color: "text-accent" },
+                { number: "30+", label: "Projects Completed", color: "text-primary" },
+                { number: "5+", label: "Years Experience", color: "text-accent" },
                 { number: "98%", label: "Client Satisfaction", color: "text-primary" }
               ].map((stat, index) => (
                 <motion.div
@@ -352,13 +352,13 @@ export default function Home() {
                   { name: "Vegnar", logo: "https://www.google.com/s2/favicons?domain=vegnar.com&sz=64", fallback: "🏢", industry: "Corporate", project: "Business Website", url: "https://www.vegnar.com/" },
                   { name: "Vegnar GFRP", logo: "https://www.google.com/s2/favicons?domain=vegnargfrp.com&sz=64", fallback: "🔧", industry: "Industrial", project: "Product Catalog", url: "https://www.vegnargfrp.com/" },
                   { name: "Vegnar Architecture", logo: "https://www.google.com/s2/favicons?domain=vegnararch.com&sz=64", fallback: "🏗️", industry: "Architecture", project: "Portfolio Site", url: "https://www.vegnararch.com/" },
-                  { name: "Aithik", logo: "https://www.google.com/s2/favicons?domain=aithik.com&sz=64", fallback: "💻", industry: "Technology", project: "Tech Platform", url: "https://www.aithik.com/" }
+                  { name: "Axocera", logo: "https://www.google.com/s2/favicons?domain=axocera.com&sz=64", fallback: "💻", industry: "Technology", project: "Tech Platform", url: "https://www.axocera.com/" }
                 ].concat([
                   { name: "Vegnar Surfaces", logo: "https://www.google.com/s2/favicons?domain=www.vegnarsurfaces.com&sz=64", fallback: "🏭", industry: "Manufacturing", project: "E-commerce Platform", url: "https://www.vegnarsurfaces.com/" },
                   { name: "Vegnar", logo: "https://www.google.com/s2/favicons?domain=vegnar.com&sz=64", fallback: "🏢", industry: "Corporate", project: "Business Website", url: "https://www.vegnar.com/" },
                   { name: "Vegnar GFRP", logo: "https://www.google.com/s2/favicons?domain=vegnargfrp.com&sz=64", fallback: "🔧", industry: "Industrial", project: "Product Catalog", url: "https://www.vegnargfrp.com/" },
                   { name: "Vegnar Architecture", logo: "https://www.google.com/s2/favicons?domain=vegnararch.com&sz=64", fallback: "🏗️", industry: "Architecture", project: "Portfolio Site", url: "https://www.vegnararch.com/" },
-                  { name: "Aithik", logo: "https://www.google.com/s2/favicons?domain=aithik.com&sz=64", fallback: "💻", industry: "Technology", project: "Tech Platform", url: "https://www.aithik.com/" }
+                  { name: "Axocera", logo: "https://www.google.com/s2/favicons?domain=axocera.com&sz=64", fallback: "💻", industry: "Technology", project: "Tech Platform", url: "https://www.axocera.com/" }
                 ]).map((client, index) => (
                   <motion.div
                     key={`${client.name}-${index}`}
@@ -415,23 +415,23 @@ export default function Home() {
               <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 md:w-32 bg-gradient-to-l from-background to-transparent z-10" />
               <div className="flex animate-scroll-reverse space-x-8 sm:space-x-10 md:space-x-12 hover:pause-animation">
                 {[
-                  { metric: "500+", label: "Projects Delivered", icon: "🚀" },
+                  { metric: "10+", label: "Projects Delivered", icon: "🚀" },
                   { metric: "98%", label: "Client Satisfaction", icon: "⭐" },
-                  { metric: "$50M+", label: "Revenue Generated", icon: "💰" },
+                  // { metric: "$50M+", label: "Revenue Generated", icon: "💰" },
                   { metric: "24/7", label: "Global Support", icon: "🌍" },
                   { metric: "99.9%", label: "Uptime SLA", icon: "🛡️" },
-                  { metric: "150+", label: "Team Members", icon: "👥" },
-                  { metric: "25+", label: "Countries Served", icon: "🌐" },
-                  { metric: "8+", label: "Years Experience", icon: "📈" }
+                  { metric: "15", label: "Team Members", icon: "👥" },
+                  { metric: "10+", label: "Countries Served", icon: "🌐" },
+                  { metric: "5+", label: "Years Experience", icon: "📈" }
                 ].concat([
-                  { metric: "500+", label: "Projects Delivered", icon: "🚀" },
+                  { metric: "10+", label: "Projects Delivered", icon: "🚀" },
                   { metric: "98%", label: "Client Satisfaction", icon: "⭐" },
-                  { metric: "$50M+", label: "Revenue Generated", icon: "💰" },
+                  // { metric: "$50M+", label: "Revenue Generated", icon: "💰" },
                   { metric: "24/7", label: "Global Support", icon: "🌍" },
                   { metric: "99.9%", label: "Uptime SLA", icon: "🛡️" },
-                  { metric: "150+", label: "Team Members", icon: "👥" },
-                  { metric: "25+", label: "Countries Served", icon: "🌐" },
-                  { metric: "8+", label: "Years Experience", icon: "📈" }
+                  { metric: "15+", label: "Team Members", icon: "👥" },
+                  { metric: "10+", label: "Countries Served", icon: "🌐" },
+                  { metric: "5+", label: "Years Experience", icon: "📈" }
                 ]).map((stat, index) => (
                   <motion.div
                     key={`${stat.label}-${index}`}
@@ -475,12 +475,12 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               {[
                 {
-                  project: "FinTech Mobile App",
-                  client: "Series B Startup",
+                  project: "Import-Export ERP",
+                  client: "Trading Corporation",
                   progress: 85,
                   status: "Testing Phase",
                   team: "8 developers",
-                  tech: ["React Native", "Node.js", "AWS"],
+                  tech: ["React", "Node.js", "AWS"],
                   flag: "🇺🇸"
                 },
                 {
@@ -493,12 +493,12 @@ export default function Home() {
                   flag: "🇬🇧"
                 },
                 {
-                  project: "Healthcare Dashboard",
-                  client: "Medical Group",
+                  project: "Custom ERP System",
+                  client: "Manufacturing Enterprise",
                   progress: 95,
                   status: "Deployment",
                   team: "6 developers",
-                  tech: ["React", "Django", "Azure"],
+                  tech: ["Next.js", "MongoDB", "Azure"],
                   flag: "🇨🇦"
                 }
               ].map((project, index) => (
@@ -596,9 +596,9 @@ export default function Home() {
                   >
                     <div className="flex items-center justify-between mb-6">
                       <Icon className="h-8 w-8 sm:h-10 sm:w-10 md:h-12 md:w-12 text-primary" />
-                      <Badge variant="secondary" className="text-xs">
+                      {/* <Badge variant="secondary" className="text-xs">
                         {industry.projects}
-                      </Badge>
+                      </Badge> */}
                     </div>
                     <h3 className="text-lg sm:text-xl font-bold group-hover:text-primary transition-colors">
                       {industry.name}
@@ -692,7 +692,7 @@ export default function Home() {
         </section>
 
         {/* Global Presence Map */}
-        <section className="py-24 bg-gradient-to-br from-background to-secondary/20">
+        {/* <section className="py-24 bg-gradient-to-br from-background to-secondary/20">
           <div className="container mx-auto px-6">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -770,7 +770,7 @@ export default function Home() {
               </motion.div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Enhanced Testimonials */}
         <section className="py-24 bg-secondary/30">
@@ -1013,7 +1013,7 @@ export default function Home() {
               
               <div className="mt-8 text-center">
                 <p className="text-muted-foreground mb-6">
-                  Trusted by Fortune 500 companies for their most sensitive projects
+                  Trusted by Fortune 30 companies for their most sensitive projects
                 </p>
                 <div className="flex justify-center items-center gap-8 opacity-60">
                   <div className="text-2xl">🏦</div>
@@ -1048,7 +1048,7 @@ export default function Home() {
                 </span>
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 md:mb-12 max-w-4xl mx-auto px-4">
-                Join 500+ successful companies who've transformed their business with our enterprise-grade solutions. 
+                Join 30+ successful companies who've transformed their business with our enterprise-grade solutions. 
                 Schedule a free strategy session and discover how we can accelerate your growth.
               </p>
               
@@ -1068,14 +1068,14 @@ export default function Home() {
                     </Link>
                   </Button>
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Button size="lg" variant="outline" className="text-xl px-12 py-8 backdrop-blur-sm border-primary/20 h-auto" asChild>
                     <Link href="/case-studies">
                       <Download className="mr-3 h-6 w-6" />
                       Download Portfolio
                     </Link>
                   </Button>
-                </motion.div>
+                </motion.div> */}
               </motion.div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-4">

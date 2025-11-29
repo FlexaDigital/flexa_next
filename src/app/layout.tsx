@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   description: "We build digital products that grow businesses. Product-led design, scalable engineering, clear results.",
   keywords: "web development, mobile apps, UI/UX design, digital marketing, cloud solutions",
   authors: [{ name: "Flexa Digital" }],
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Flexa Digital - Digital Product Studio",
     description: "We build digital products that grow businesses",

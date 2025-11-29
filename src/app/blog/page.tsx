@@ -19,73 +19,67 @@ export default function Blog() {
     {
       title: "React Patterns 2024",
       excerpt: "Modern React patterns and best practices for scalable applications. Learn about server components, concurrent features, and advanced hooks.",
-      date: "2024-01-15",
+      date: "2020-03-15T10:30:00Z",
       readTime: "8 min read",
       category: "React",
       image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop",
       href: "/blog/react-patterns-2024",
-      views: "2.1k",
-      likes: "156",
+
       featured: true
     },
     {
       title: "SEO 2024 Guide",
       excerpt: "Complete guide to technical SEO and content optimization strategies for modern websites and applications.",
-      date: "2024-01-10",
+      date: "2020-05-22T14:15:00Z",
       readTime: "12 min read",
       category: "SEO",
       image: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&h=400&fit=crop",
       href: "/blog/seo-2024-guide",
-      views: "1.8k",
-      likes: "134",
+
       featured: false
     },
     {
       title: "UI/UX Psychology",
       excerpt: "Understanding user behavior and psychology in digital design. Create interfaces that users love and understand.",
-      date: "2024-01-05",
+      date: "2020-07-08T09:45:00Z",
       readTime: "10 min read",
       category: "Design",
       image: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=600&h=400&fit=crop",
       href: "/blog/ui-ux-psychology",
-      views: "3.2k",
-      likes: "289",
+
       featured: true
     },
     {
       title: "DevOps Best Practices",
       excerpt: "Essential DevOps practices for modern development teams. CI/CD, infrastructure as code, and monitoring strategies.",
-      date: "2023-12-28",
+      date: "2020-09-12T16:20:00Z",
       readTime: "15 min read",
       category: "DevOps",
       image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=600&h=400&fit=crop",
       href: "/blog/devops-best-practices",
-      views: "1.5k",
-      likes: "98",
+
       featured: false
     },
     {
       title: "Server Components",
       excerpt: "Deep dive into React Server Components and their benefits. Performance optimization and better user experiences.",
-      date: "2023-12-20",
+      date: "2020-11-25T11:10:00Z",
       readTime: "11 min read",
       category: "React",
       image: "https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=600&h=400&fit=crop",
       href: "/blog/server-components",
-      views: "2.7k",
-      likes: "203",
+
       featured: true
     },
     {
       title: "Mobile First Design",
       excerpt: "Why mobile-first approach is crucial for modern web development. Responsive design principles and best practices.",
-      date: "2023-12-15",
+      date: "2020-12-30T13:55:00Z",
       readTime: "9 min read",
       category: "Design",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop",
       href: "/blog/mobile-first-design",
-      views: "1.9k",
-      likes: "167",
+
       featured: false
     }
   ];
@@ -212,26 +206,14 @@ export default function Blog() {
                     </div>
                     
                     <div className="p-6">
-                      <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
-                        <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-1">
-                            <Calendar className="h-4 w-4" />
-                            {new Date(post.date).toLocaleDateString()}
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Clock className="h-4 w-4" />
-                            {post.readTime}
-                          </div>
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                        <div className="flex items-center gap-1">
+                          <Calendar className="h-4 w-4" />
+                          {new Date(post.date).toLocaleDateString()}
                         </div>
-                        <div className="flex items-center gap-3">
-                          <div className="flex items-center gap-1">
-                            <Eye className="h-3 w-3" />
-                            {post.views}
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Heart className="h-3 w-3" />
-                            {post.likes}
-                          </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="h-4 w-4" />
+                          {post.readTime}
                         </div>
                       </div>
                       
@@ -310,26 +292,14 @@ export default function Blog() {
                   </div>
                   
                   <div className="p-6">
-                    <div className="flex items-center justify-between text-sm text-muted-foreground mb-3">
-                      <div className="flex items-center gap-4">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4" />
-                          {new Date(post.date).toLocaleDateString()}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Clock className="h-4 w-4" />
-                          {post.readTime}
-                        </div>
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-4 w-4" />
+                        {new Date(post.date).toLocaleDateString()}
                       </div>
-                      <div className="flex items-center gap-3">
-                        <div className="flex items-center gap-1">
-                          <Eye className="h-3 w-3" />
-                          {post.views}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Heart className="h-3 w-3" />
-                          {post.likes}
-                        </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="h-4 w-4" />
+                        {post.readTime}
                       </div>
                     </div>
                     
