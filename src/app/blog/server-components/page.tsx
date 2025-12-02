@@ -31,18 +31,18 @@ export default function ServerComponents() {
     <div className="min-h-screen">
       <Header />
       <main>
-        <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-hero pt-32 pb-20">
+        <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center bg-gradient-hero pt-24 md:pt-32 pb-12 md:pb-20">
           <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-          <div className="container mx-auto px-6 text-center relative z-10">
+          <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <Badge variant="secondary" className="mb-4 bg-card/50 backdrop-blur-sm">
                 <Server className="h-3 w-3 mr-1" />
                 React Server Components
               </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
                 React <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Server Components</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 px-4">
                 Deep dive into React Server Components and their revolutionary benefits. Learn how to build faster, more efficient applications with server-side rendering and zero JavaScript bundle impact.
               </p>
               
@@ -90,12 +90,12 @@ export default function ServerComponents() {
           </div>
         </section>
 
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
+        <section className="py-12 md:py-20 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-4 gap-12 h-screen">
-                <div className="lg:col-span-3 overflow-y-auto pr-4 scrollbar-hide hover:scrollbar-show">
-                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="prose prose-lg max-w-none">
+              <div className="flex flex-col lg:grid lg:grid-cols-4 gap-6 lg:gap-12">
+                <div className="lg:col-span-3 order-2 lg:order-1">
+                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="blog-content">
                     
                     <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
                       <Image src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=800&h=400&fit=crop" alt="React Server Components" className="w-full h-full object-cover" width={800} height={400} />
@@ -486,9 +486,9 @@ function AddToCartButton({ productId }) {
                   </motion.div>
                 </div>
 
-                <div className="lg:col-span-1 h-screen overflow-y-auto scrollbar-hide hover:scrollbar-show">
-                  <div className="sticky top-0 space-y-8 py-8">
-                    <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="bg-card border border-border rounded-xl p-6">
+                <div className="lg:col-span-1 order-1 lg:order-2">
+                  <div className="space-y-4 lg:space-y-8 lg:sticky lg:top-8">
+                    <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="hidden lg:block bg-card border border-border rounded-xl p-6">
                       <h4 className="font-semibold mb-4 flex items-center gap-2">
                         <BookOpen className="h-4 w-4" />
                         Table of Contents

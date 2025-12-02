@@ -39,8 +39,8 @@ const TechStack = () => {
       title: "Frontend Mastery",
       subtitle: "Crafting Digital Experiences",
       icon: Code2,
-      color: "from-blue-500 to-cyan-500",
-      bgPattern: "bg-gradient-to-br from-blue-50 to-cyan-50",
+      color: "from-primary to-accent",
+      bgPattern: "bg-gradient-to-br from-primary/5 to-accent/5",
       technologies: [
         {
           name: "React Ecosystem",
@@ -59,12 +59,12 @@ const TechStack = () => {
           logo: "▲"
         },
         {
-          name: "TypeScript",
-          version: "v5+",
-          description: "Type-safe JavaScript at scale",
-          stats: { projects: "250+", performance: "50% fewer bugs", satisfaction: "99%" },
-          features: ["Strict Mode", "Generics", "Decorators", "Module Resolution"],
-          logo: "🔷"
+          name: "WordPress",
+          version: "v6.4+",
+          description: "Flexible content management system",
+          stats: { projects: "250+", performance: "Easy to manage", satisfaction: "99%" },
+          features: ["Custom Themes", "Plugin Ecosystem", "SEO Optimized", "E-commerce Ready"],
+          logo: "🌐"
         }
       ]
     },
@@ -72,8 +72,8 @@ const TechStack = () => {
       title: "Backend Excellence",
       subtitle: "Powering Digital Infrastructure",
       icon: Database,
-      color: "from-emerald-500 to-teal-500",
-      bgPattern: "bg-gradient-to-br from-emerald-50 to-teal-50",
+      color: "from-primary to-accent",
+      bgPattern: "bg-gradient-to-br from-primary/5 to-accent/5",
       technologies: [
         {
           name: "Node.js Runtime",
@@ -106,8 +106,8 @@ const TechStack = () => {
       title: "Mobile Innovation",
       subtitle: "Cross-Platform Excellence",
       icon: Smartphone,
-      color: "from-orange-500 to-red-500",
-      bgPattern: "bg-gradient-to-br from-orange-50 to-red-50",
+      color: "from-primary to-accent",
+      bgPattern: "bg-gradient-to-br from-primary/5 to-accent/5",
       technologies: [
         {
           name: "React Native",
@@ -211,10 +211,8 @@ const TechStack = () => {
         </section>
 
         {/* Interactive Tech Categories */}
-        <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-violet-600/10 via-fuchsia-500/10 to-purple-600/10" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(236,72,153,0.1),transparent_50%)]" />
+        <section className="py-24 relative overflow-hidden" style={{backgroundColor: '#0f111d'}}>
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-100/20 to-gray-200/20" />
           <div className="absolute inset-0 bg-grid-pattern opacity-[0.03]" />
           <div className="container mx-auto px-6 relative z-10">
             <motion.div
@@ -342,7 +340,7 @@ const TechStack = () => {
                         const techLinks = {
                           "React Ecosystem": "/tech/react",
                           "Next.js Framework": "/tech/nextjs",
-                          "TypeScript": "/tech/typescript",
+                          "WordPress": "/tech/wordpress",
                           "Node.js Runtime": "/tech/nodejs",
                           "Python Ecosystem": "/tech/python",
                           "GraphQL APIs": "/tech/graphql",
@@ -380,7 +378,7 @@ const TechStack = () => {
         </section>
 
         {/* Why Choose Our Stack */}
-        <section className="py-24 bg-gradient-to-br from-primary/5 to-accent/5">
+        <section className="py-24 bg-secondary/30">
           <div className="container mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -401,28 +399,28 @@ const TechStack = () => {
                   description: "Optimized for speed and performance",
                   icon: Zap,
                   metric: "3x Faster",
-                  color: "text-yellow-500"
+                  color: "text-primary"
                 },
                 {
                   title: "Enterprise Ready",
                   description: "Scalable and secure architecture",
                   icon: Shield,
                   metric: "99.9% Uptime",
-                  color: "text-blue-500"
+                  color: "text-primary"
                 },
                 {
                   title: "Future Proof",
                   description: "Latest technologies and standards",
                   icon: Rocket,
                   metric: "Always Updated",
-                  color: "text-purple-500"
+                  color: "text-primary"
                 },
                 {
                   title: "Cost Effective",
                   description: "Optimized development and maintenance",
                   icon: BarChart3,
                   metric: "40% Savings",
-                  color: "text-green-500"
+                  color: "text-primary"
                 }
               ].map((benefit, index) => {
                 const Icon = benefit.icon;
@@ -448,7 +446,7 @@ const TechStack = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-24 bg-gradient-hero relative overflow-hidden">
+        <section className="py-24 bg-gradient-to-br from-black to-gray-800 text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-grid-pattern opacity-10" />
           <div className="container mx-auto px-6 text-center relative z-10">
             <motion.div
@@ -456,27 +454,22 @@ const TechStack = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8">
-                Ready to Build the
-                <br />
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Future?
-                </span>
+              <h2 className="text-4xl font-bold mb-6">
+                Ready to Build the Future?
               </h2>
-              <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+              <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
                 Let's leverage our cutting-edge tech stack to create something extraordinary for your business
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Button size="lg" className="bg-gradient-primary text-lg px-8 py-6 rounded-full hover:shadow-glow" asChild>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-white text-black hover:bg-white/90" asChild>
                   <Link href="/contact">
-                    <Rocket className="w-5 h-5 mr-2" />
                     Start Your Project
+                    <ArrowRight className="ml-2" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-full" asChild>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
                   <Link href="/case-studies">
-                    <Award className="w-5 h-5 mr-2" />
                     View Success Stories
                   </Link>
                 </Button>
