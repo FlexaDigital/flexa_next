@@ -187,7 +187,7 @@ export default function Home() {
       company: "HealthTech Solutions (Fortune 500)",
       content: "Working with Flexa Digital was transformational. They modernized our legacy healthcare platform while maintaining HIPAA compliance and zero downtime. Their attention to security and scalability is unmatched in the industry.",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face",
       metrics: ["Zero security incidents", "500% performance boost", "HIPAA compliant"],
       logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=120&h=40&fit=crop"
     },

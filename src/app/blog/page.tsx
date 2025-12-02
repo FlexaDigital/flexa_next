@@ -100,9 +100,9 @@ export default function Blog() {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-[70vh] flex items-center justify-center bg-gradient-hero pt-32 pb-20">
+        <section className="relative min-h-[60vh] md:min-h-[70vh] flex items-center justify-center bg-gradient-hero pt-24 md:pt-32 pb-12 md:pb-20">
           <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-          <div className="container mx-auto px-6 text-center relative z-10">
+          <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -112,18 +112,18 @@ export default function Blog() {
                 <TrendingUp className="h-3 w-3 mr-1" />
                 Latest Insights
               </Badge>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 md:mb-6 leading-tight">
                 Tech <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Blog</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 px-4">
                 Insights, tutorials, and industry trends from our engineering team. 
                 Stay updated with the latest in web development, design, and technology.
               </p>
               
               {/* Search and Filter */}
-              <div className="max-w-2xl mx-auto">
-                <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                  <div className="relative flex-1">
+              <div className="max-w-2xl mx-auto px-4">
+                <div className="flex flex-col gap-4 mb-6">
+                  <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                     <Input
                       type="text"
@@ -155,8 +155,8 @@ export default function Blog() {
 
         {/* Featured Posts */}
         {featuredPosts.length > 0 && (
-          <section className="py-16 bg-secondary/30">
-            <div className="container mx-auto px-6">
+          <section className="py-12 md:py-16 bg-secondary/30">
+            <div className="container mx-auto px-4 md:px-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -173,7 +173,7 @@ export default function Blog() {
                 </p>
               </motion.div>
               
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {featuredPosts.slice(0, 3).map((post, index) => (
                   <motion.article
                     key={post.title}
@@ -182,7 +182,7 @@ export default function Blog() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ scale: 1.02, y: -5 }}
-                    className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-card transition-all duration-300 relative"
+                    className="bg-card border border-border rounded-xl md:rounded-2xl overflow-hidden hover:shadow-card transition-all duration-300 relative"
                   >
                     <div className="absolute top-4 right-4 z-10">
                       <Badge className="bg-primary/90 backdrop-blur-sm">
@@ -190,7 +190,7 @@ export default function Blog() {
                       </Badge>
                     </div>
                     
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative h-40 sm:h-48 overflow-hidden">
                       <Image
                         src={post.image}
                         alt={post.title}
@@ -198,39 +198,39 @@ export default function Blog() {
                         width={600}
                         height={400}
                       />
-                      <div className="absolute top-4 left-4">
-                        <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
+                      <div className="absolute top-3 left-3 md:top-4 md:left-4">
+                        <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm text-xs">
                           {post.category}
                         </Badge>
                       </div>
                     </div>
                     
-                    <div className="p-6">
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                    <div className="p-4 md:p-6">
+                      <div className="flex items-center gap-3 md:gap-4 text-xs md:text-sm text-muted-foreground mb-3">
                         <div className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4" />
-                          {new Date(post.date).toLocaleDateString()}
+                          <Calendar className="h-3 w-3 md:h-4 md:w-4" />
+                          <span className="text-xs md:text-sm">{new Date(post.date).toLocaleDateString()}</span>
                         </div>
                         <div className="flex items-center gap-1">
-                          <Clock className="h-4 w-4" />
-                          {post.readTime}
+                          <Clock className="h-3 w-3 md:h-4 md:w-4" />
+                          <span className="text-xs md:text-sm">{post.readTime}</span>
                         </div>
                       </div>
                       
-                      <h3 className="text-xl font-bold mb-3 hover:text-primary transition-colors">
+                      <h3 className="text-lg md:text-xl font-bold mb-3 hover:text-primary transition-colors line-clamp-2">
                         <Link href={post.href}>
                           {post.title}
                         </Link>
                       </h3>
                       
-                      <p className="text-muted-foreground mb-4 line-clamp-3">
+                      <p className="text-sm md:text-base text-muted-foreground mb-4 line-clamp-3">
                         {post.excerpt}
                       </p>
                       
-                      <Button variant="ghost" className="group p-0 h-auto" asChild>
+                      <Button variant="ghost" className="group p-0 h-auto text-sm" asChild>
                         <Link href={post.href}>
                           Read More
-                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                          <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
                       </Button>
                     </div>
@@ -242,8 +242,8 @@ export default function Blog() {
         )}
 
         {/* All Blog Posts */}
-        <section className="py-24 bg-background">
-          <div className="container mx-auto px-6">
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -258,7 +258,7 @@ export default function Blog() {
               </p>
             </motion.div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {filteredPosts.map((post, index) => (
                 <motion.article
                   key={post.title}
@@ -267,9 +267,9 @@ export default function Blog() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   whileHover={{ scale: 1.02, y: -5 }}
-                  className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-card transition-all duration-300"
+                  className="bg-card border border-border rounded-xl md:rounded-2xl overflow-hidden hover:shadow-card transition-all duration-300"
                 >
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-40 sm:h-48 overflow-hidden">
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -277,13 +277,13 @@ export default function Blog() {
                       width={600}
                       height={400}
                     />
-                    <div className="absolute top-4 left-4">
-                      <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">
+                    <div className="absolute top-3 left-3 md:top-4 md:left-4">
+                      <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm text-xs">
                         {post.category}
                       </Badge>
                     </div>
                     {post.featured && (
-                      <div className="absolute top-4 right-4">
+                      <div className="absolute top-3 right-3 md:top-4 md:right-4">
                         <Badge className="bg-primary/90 backdrop-blur-sm text-xs">
                           Featured
                         </Badge>
@@ -291,32 +291,32 @@ export default function Blog() {
                     )}
                   </div>
                   
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
+                  <div className="p-4 md:p-6">
+                    <div className="flex items-center gap-3 md:gap-4 text-xs md:text-sm text-muted-foreground mb-3">
                       <div className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
-                        {new Date(post.date).toLocaleDateString()}
+                        <Calendar className="h-3 w-3 md:h-4 md:w-4" />
+                        <span className="text-xs md:text-sm">{new Date(post.date).toLocaleDateString()}</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        {post.readTime}
+                        <Clock className="h-3 w-3 md:h-4 md:w-4" />
+                        <span className="text-xs md:text-sm">{post.readTime}</span>
                       </div>
                     </div>
                     
-                    <h3 className="text-xl font-bold mb-3 hover:text-primary transition-colors">
+                    <h3 className="text-lg md:text-xl font-bold mb-3 hover:text-primary transition-colors line-clamp-2">
                       <Link href={post.href}>
                         {post.title}
                       </Link>
                     </h3>
                     
-                    <p className="text-muted-foreground mb-4 line-clamp-3">
+                    <p className="text-sm md:text-base text-muted-foreground mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
                     
-                    <Button variant="ghost" className="group p-0 h-auto" asChild>
+                    <Button variant="ghost" className="group p-0 h-auto text-sm" asChild>
                       <Link href={post.href}>
                         Read More
-                        <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4 group-hover:translate-x-1 transition-transform" />
                       </Link>
                     </Button>
                   </div>

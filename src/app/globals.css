@@ -236,4 +236,81 @@ All colors MUST be HSL.
   .grid-responsive-4 {
     @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4;
   }
+
+  /* Blog-specific mobile styles */
+  .blog-content {
+    @apply max-w-none;
+  }
+
+  .blog-content h2 {
+    @apply text-xl sm:text-2xl md:text-3xl mt-8 mb-4 font-bold text-foreground;
+  }
+
+  .blog-content h3 {
+    @apply text-lg sm:text-xl md:text-2xl mt-6 mb-3 font-semibold text-foreground;
+  }
+
+  .blog-content h4 {
+    @apply text-base sm:text-lg md:text-xl mt-4 mb-2 font-medium text-foreground;
+  }
+
+  .blog-content p {
+    @apply text-sm sm:text-base leading-relaxed mb-4 text-muted-foreground;
+  }
+
+  .blog-content ul, .blog-content ol {
+    @apply text-sm sm:text-base mb-4 text-muted-foreground;
+  }
+
+  .blog-content li {
+    @apply mb-1;
+  }
+
+  .blog-content strong {
+    @apply text-foreground font-semibold;
+  }
+
+  .blog-content code {
+    @apply text-primary bg-secondary/30 px-1 py-0.5 rounded text-sm;
+  }
+
+  .blog-content a {
+    @apply text-primary hover:text-primary/80 transition-colors;
+  }
+
+  /* Mobile-optimized line clamping */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Mobile touch targets */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Mobile-friendly buttons */
+  .btn-mobile {
+    @apply px-4 py-3 text-sm font-medium rounded-lg;
+    @apply min-h-[44px] touch-target;
+  }
+
+  /* Responsive image containers */
+  .img-responsive {
+    @apply w-full h-auto;
+  }
+
+  .img-container-mobile {
+    @apply relative overflow-hidden rounded-lg;
+    @apply h-40 sm:h-48 md:h-64;
+  }
 }

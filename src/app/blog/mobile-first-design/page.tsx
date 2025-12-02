@@ -31,39 +31,39 @@ export default function MobileFirstDesign() {
     <div className="min-h-screen">
       <Header />
       <main>
-        <section className="relative min-h-[60vh] flex items-center justify-center bg-gradient-hero pt-32 pb-20">
+        <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center bg-gradient-hero pt-24 md:pt-32 pb-12 md:pb-20">
           <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-          <div className="container mx-auto px-6 text-center relative z-10">
+          <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <Badge variant="secondary" className="mb-4 bg-card/50 backdrop-blur-sm">
                 <Smartphone className="h-3 w-3 mr-1" />
                 Mobile-First Design
               </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
                 Mobile <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">First Design</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8 px-4">
                 Why mobile-first approach is crucial for modern web development. Learn responsive design principles, performance optimization, and user experience best practices for the mobile era.
               </p>
               
-              <div className="flex flex-wrap items-center justify-center gap-6 text-muted-foreground mb-8">
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-4 w-4" />
-                  <span>December 15, 2023</span>
+              <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-sm md:text-base text-muted-foreground mb-6 md:mb-8">
+                <div className="flex items-center gap-1 md:gap-2">
+                  <Calendar className="h-3 w-3 md:h-4 md:w-4" />
+                  <span className="text-xs md:text-sm">Dec 15, 2023</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Clock className="h-4 w-4" />
-                  <span>9 min read</span>
+                <div className="flex items-center gap-1 md:gap-2">
+                  <Clock className="h-3 w-3 md:h-4 md:w-4" />
+                  <span className="text-xs md:text-sm">9 min read</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <User className="h-4 w-4" />
-                  <span>FlexaDigital Design Team</span>
+                <div className="hidden sm:flex items-center gap-1 md:gap-2">
+                  <User className="h-3 w-3 md:h-4 md:w-4" />
+                  <span className="text-xs md:text-sm">Design Team</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="hidden md:flex items-center gap-2">
                   <Eye className="h-4 w-4" />
                   <span>1.9k views</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="hidden md:flex items-center gap-2">
                   <Heart className="h-4 w-4" />
                   <span>167 likes</span>
                 </div>
@@ -90,12 +90,12 @@ export default function MobileFirstDesign() {
           </div>
         </section>
 
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
+        <section className="py-12 md:py-20 bg-background">
+          <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-6xl mx-auto">
-              <div className="grid lg:grid-cols-4 gap-12 h-screen">
-                <div className="lg:col-span-3 overflow-y-auto pr-4 scrollbar-hide hover:scrollbar-show">
-                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="prose prose-lg max-w-none">
+              <div className="flex flex-col lg:grid lg:grid-cols-4 gap-6 lg:gap-12">
+                <div className="lg:col-span-3 order-2 lg:order-1">
+                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="blog-content">
                     
                     <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8">
                       <Image src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop" alt="Mobile First Design" className="w-full h-full object-cover" width={800} height={400} />
@@ -543,9 +543,9 @@ export default function MobileFirstDesign() {
                   </motion.div>
                 </div>
 
-                <div className="lg:col-span-1 h-screen overflow-y-auto scrollbar-hide hover:scrollbar-show">
-                  <div className="sticky top-0 space-y-8 py-8">
-                    <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="bg-card border border-border rounded-xl p-6">
+                <div className="lg:col-span-1 order-1 lg:order-2">
+                  <div className="space-y-4 lg:space-y-8 lg:sticky lg:top-8">
+                    <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="hidden lg:block bg-card border border-border rounded-xl p-6">
                       <h4 className="font-semibold mb-4 flex items-center gap-2">
                         <BookOpen className="h-4 w-4" />
                         Table of Contents
@@ -559,36 +559,36 @@ export default function MobileFirstDesign() {
                       </nav>
                     </motion.div>
 
-                    <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="bg-card border border-border rounded-xl p-6">
-                      <h4 className="font-semibold mb-4">Mobile Design Experts</h4>
+                    <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="bg-card border border-border rounded-lg lg:rounded-xl p-4 lg:p-6">
+                      <h4 className="font-semibold mb-4 text-sm lg:text-base">Mobile Design Experts</h4>
                       <div className="flex items-center gap-3 mb-3">
-                        <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold">
+                        <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-sm lg:text-base">
                           FD
                         </div>
                         <div>
-                          <p className="font-medium">FlexaDigital Design Team</p>
-                          <p className="text-sm text-muted-foreground">Mobile UX Specialists</p>
+                          <p className="font-medium text-sm lg:text-base">FlexaDigital Design Team</p>
+                          <p className="text-xs lg:text-sm text-muted-foreground">Mobile UX Specialists</p>
                         </div>
                       </div>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-xs lg:text-sm text-muted-foreground">
                         Our design team has created mobile-first experiences for 150+ applications across various industries.
                       </p>
                     </motion.div>
 
-                    <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="bg-card border border-border rounded-xl p-6">
-                      <h4 className="font-semibold mb-4">Related Articles</h4>
-                      <div className="space-y-4">
+                    <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.4 }} className="bg-card border border-border rounded-lg lg:rounded-xl p-4 lg:p-6">
+                      <h4 className="font-semibold mb-4 text-sm lg:text-base">Related Articles</h4>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3 lg:gap-4">
                         {relatedPosts.map((post) => (
                           <Link key={post.href} href={post.href} className="block group">
-                            <div className="space-y-1">
-                              <h5 className="font-medium text-sm group-hover:text-primary transition-colors">
+                            <div className="space-y-1 p-3 lg:p-0 bg-secondary/20 lg:bg-transparent rounded-lg lg:rounded-none">
+                              <h5 className="font-medium text-xs lg:text-sm group-hover:text-primary transition-colors line-clamp-2">
                                 {post.title}
                               </h5>
                               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                                 <Badge variant="outline" className="text-xs">
                                   {post.category}
                                 </Badge>
-                                <span>{post.readTime}</span>
+                                <span className="hidden sm:inline">{post.readTime}</span>
                               </div>
                             </div>
                           </Link>
@@ -602,27 +602,28 @@ export default function MobileFirstDesign() {
           </div>
         </section>
 
-        <section className="py-12 bg-secondary/30 border-t border-border">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <Button variant="outline" asChild>
+        <section className="py-8 md:py-12 bg-secondary/30 border-t border-border">
+          <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+            <div className="flex flex-col gap-4">
+              <Button variant="outline" className="w-full sm:w-auto" asChild>
                 <Link href="/blog">
                   <ArrowLeft className="mr-2 h-4 w-4" />
                   Back to Blog
                 </Link>
               </Button>
               
-              <div className="flex items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
                 {[
-                  { icon: Heart, label: "Like (167)", action: () => console.log('Liked') },
-                  { icon: MessageCircle, label: "Comment", action: () => console.log('Comment') },
-                  { icon: Share2, label: "Share", action: () => typeof window !== 'undefined' && typeof window !== 'undefined' && navigator.share ? navigator.share({title: 'Mobile First Design', url: window.location.href}) : console.log('Share') }
+                  { icon: Heart, label: "Like (167)", shortLabel: "Like", action: () => console.log('Liked') },
+                  { icon: MessageCircle, label: "Comment", shortLabel: "Comment", action: () => console.log('Comment') },
+                  { icon: Share2, label: "Share", shortLabel: "Share", action: () => typeof window !== 'undefined' && typeof window !== 'undefined' && navigator.share ? navigator.share({title: 'Mobile First Design', url: window.location.href}) : console.log('Share') }
                 ].map((btn) => {
                   const Icon = btn.icon;
                   return (
-                    <Button key={btn.label} variant="outline" size="sm" onClick={btn.action}>
+                    <Button key={btn.label} variant="outline" size="sm" className="w-full sm:w-auto" onClick={btn.action}>
                       <Icon className="h-4 w-4 mr-2" />
-                      {btn.label}
+                      <span className="sm:hidden">{btn.shortLabel}</span>
+                      <span className="hidden sm:inline">{btn.label}</span>
                     </Button>
                   );
                 })}

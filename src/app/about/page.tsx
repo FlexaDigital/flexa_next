@@ -84,24 +84,24 @@ export default function About() {
         </section>
 
         {/* Mission & Vision Section */}
-        <section className="py-20 bg-secondary">
-          <div className="container mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <div className="bg-background border border-border rounded-2xl p-8">
-                <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <Target className="w-8 h-8 text-primary" />
+        <section className="py-12 sm:py-16 md:py-20 bg-secondary">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
+              <div className="bg-background border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
+                <div className="bg-primary/10 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                  <Target className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Our Mission</h3>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   Build honest, scalable digital products that deliver measurable business value.
                 </p>
               </div>
-              <div className="bg-background border border-border rounded-2xl p-8">
-                <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <Award className="w-8 h-8 text-accent" />
+              <div className="bg-background border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
+                <div className="bg-accent/10 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+                  <Award className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-accent" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Our Vision</h3>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   To be the go-to engineering partner for startups and growth-stage companies that 
                   want predictable outcomes and fast iteration.
                 </p>
@@ -151,26 +151,29 @@ export default function About() {
         </section>
 
         {/* Our Journey Timeline */}
-        <section className="py-24 bg-secondary/30">
-          <div className="container mx-auto px-6">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-secondary/30">
+          <div className="container mx-auto px-4 sm:px-6">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-16"
+              className="text-center mb-8 sm:mb-12 md:mb-16"
             >
-              <Badge variant="outline" className="mb-4">Our Journey</Badge>
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              <Badge variant="outline" className="mb-3 sm:mb-4">Our Journey</Badge>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
                 5 Years of Innovation
               </h2>
-              <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto px-4">
                 From startup to industry leader - our growth story
               </p>
             </motion.div>
 
             <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-accent rounded-full" />
+              {/* Desktop Timeline Line */}
+              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary to-accent rounded-full" />
+              {/* Mobile Timeline Line */}
+              <div className="md:hidden absolute left-6 top-0 w-0.5 h-full bg-gradient-to-b from-primary to-accent rounded-full" />
               
               {[
                 { year: "2020", title: "Founded", desc: "Started with 2 developers", metric: "2 Team Members" },
@@ -185,21 +188,30 @@ export default function About() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className={`relative flex items-center mb-16 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
+                  className={`relative flex items-center mb-8 sm:mb-12 md:mb-16 ${
+                    index % 2 === 0 ? 'md:justify-start justify-start' : 'md:justify-end justify-start'
+                  }`}
                 >
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
+                  <div className={`w-full md:w-5/12 ${
+                    index % 2 === 0 
+                      ? 'md:text-right md:pr-8 text-left pl-12 md:pl-0' 
+                      : 'md:text-left md:pl-8 text-left pl-12 md:pl-0'
+                  }`}>
                     <motion.div 
-                      whileHover={{ scale: 1.05 }}
-                      className="bg-card border border-border rounded-2xl p-6 hover:shadow-card transition-all duration-300"
+                      whileHover={{ scale: 1.02 }}
+                      className="bg-card border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:shadow-card transition-all duration-300"
                     >
-                      <div className="text-3xl font-bold text-primary mb-2">{milestone.year}</div>
-                      <h3 className="text-xl font-bold mb-2">{milestone.title}</h3>
-                      <p className="text-muted-foreground mb-3">{milestone.desc}</p>
-                      <div className="text-sm font-bold text-accent">{milestone.metric}</div>
+                      <div className="text-2xl sm:text-3xl font-bold text-primary mb-2">{milestone.year}</div>
+                      <h3 className="text-lg sm:text-xl font-bold mb-2">{milestone.title}</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground mb-3">{milestone.desc}</p>
+                      <div className="text-xs sm:text-sm font-bold text-accent">{milestone.metric}</div>
                     </motion.div>
                   </div>
                   
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-background shadow-lg" />
+                  {/* Desktop Timeline Dot */}
+                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 bg-primary rounded-full border-2 sm:border-4 border-background shadow-lg" />
+                  {/* Mobile Timeline Dot */}
+                  <div className="md:hidden absolute left-4 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-2 border-background shadow-lg" />
                 </motion.div>
               ))}
             </div>
@@ -207,16 +219,16 @@ export default function About() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-secondary">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold mb-6">Ready to Work Together?</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <section className="py-12 sm:py-16 md:py-20 bg-secondary">
+          <div className="container mx-auto px-4 sm:px-6 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">Ready to Work Together?</h2>
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
               Let's discuss how we can help bring your digital vision to life
             </p>
-            <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300" asChild>
+            <Button size="lg" className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-sm sm:text-base" asChild>
               <Link href="/contact">
                 Get a Free Quote
-                <ArrowRight className="ml-2" />
+                <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
           </div>

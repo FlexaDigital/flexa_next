@@ -32,7 +32,7 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="relative z-10">
         {/* Newsletter Section */}
-        <div className="border-b border-border/50">
+        {/* <div className="border-b border-border/50">
           <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ const Footer = () => {
               </p>
             </motion.div>
           </div>
-        </div>
+        </div> */}
 
         {/* Main Footer Links */}
         <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16">

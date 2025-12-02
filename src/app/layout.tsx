@@ -12,26 +12,57 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Flexa Digital - Digital Product Studio",
-  description: "We build digital products that grow businesses. Product-led design, scalable engineering, clear results.",
-  keywords: "web development, mobile apps, UI/UX design, digital marketing, cloud solutions",
-  authors: [{ name: "Flexa Digital" }],
+  title: "FlexaDigital - Premium Web Development & Digital Solutions | Custom Software Development Company",
+  description: "Transform your business with FlexaDigital's expert web development, mobile app development, UI/UX design, and cloud solutions. 500+ successful projects delivered. Get free consultation today!",
+  keywords: "web development company, custom software development, mobile app development, UI UX design agency, digital transformation, cloud solutions, enterprise software, e-commerce development, SaaS development, React development, Next.js development, Node.js development, full stack development, digital agency, software consulting",
+  authors: [{ name: "FlexaDigital Team" }],
   icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.png", sizes: "16x16", type: "image/png" }
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/favicon.png", sizes: "180x180", type: "image/png" }
+    ],
   },
   openGraph: {
-    title: "Flexa Digital - Digital Product Studio",
-    description: "We build digital products that grow businesses",
+    title: "FlexaDigital - Premium Web Development & Digital Solutions",
+    description: "Transform your business with expert web development, mobile apps, and digital solutions. 50+ successful projects delivered worldwide.",
     url: "https://flexadigital.com",
-    siteName: "Flexa Digital",
+    siteName: "FlexaDigital",
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://flexadigital.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "FlexaDigital - Premium Web Development Company"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Flexa Digital - Digital Product Studio",
-    description: "We build digital products that grow businesses",
+    title: "FlexaDigital - Premium Web Development & Digital Solutions",
+    description: "Transform your business with expert web development, mobile apps, and digital solutions. 500+ successful projects delivered worldwide.",
+    creator: "@FlexaDigital",
+    images: ["https://flexadigital.com/og-image.jpg"]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 };
 
